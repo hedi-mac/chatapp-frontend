@@ -72,3 +72,24 @@ input {
 .s16 { font-size: 16px; }
 .s24 { font-size: 24px; }
 .s30 { font-size: 30px; }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 0px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #34495ebe;
+    border-radius: 4px;
+    &:hover {
+        background: #34495ee0;
+    }
+}

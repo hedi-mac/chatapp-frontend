@@ -16,11 +16,12 @@ body {
 
 .messenger {
     background: #fff;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    left:30px;
+    top: 50px;
+    right: 45px;
+    bottom: 50px;
+    left:45px;
     border-radius: 3px;
+    border: 2.5px solid #0684ba25;
     .inbox{
         width: 450px;
         border-right: 1px #ddd solid;
@@ -176,15 +177,77 @@ body {
                 }
             }
         }
-        background-color: #34495e99;
+        
         /* Chat */
         .chat {
             border-top: 1px #ddd solid;
             border-bottom: 1px #ddd solid;
             flex: 1;
-            background-color: #e4dbd4;
-            background-image: url(https://media.istockphoto.com/id/1216688115/vector/seamless-pattern-with-social-media-elements.jpg?s=612x612&w=0&k=20&c=5c_iSGEPfiNFNKsR2cZaix1plXGuTip3gYF9RYSsCIo=);
-            opacity: 0.05;
+            background-image: url('../media/backgroundO20.png');
+            background-color: #e4dbdbb5;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 20px 30px;
+            .bubble {
+                flex: 1;
+                margin: 3px 0px;
+                
+                .ballon{
+                    
+                    background: #fff;
+                    display: table;
+                    padding: 7px 60px 7px 10px;
+                    border-radius: 8px;
+                    max-width: 30%;
+                    border: 1px solid #0684bacc;
+                    border-left: 0.5px solid #0684baaa;
+                    .stamp {
+                        bottom: 7px;
+                        right: 7px;
+                    } 
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 12px;
+                        height: 15px;
+                        left: -13px;
+                        bottom: 8px;
+                        z-index: 10;
+                        background: #fff;
+                        border-left: 1px solid #0684baee;
+                        border-bottom: 1px solid #0684baee;
+                        border-top-left-radius: 70px;
+                        border-bottom-left-radius: 5px;
+                    }       
+                }
+
+                &.mine {
+                    justify-content: flex-end;
+                    .ballon {
+                        background: #0684ba88;
+                        border: 1px solid #0684bacc;
+                        border-right: 0.5px solid #0684baaa;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 8px;
+                            height: 15px;
+                            right: -9.5px;
+                            left: auto;
+                            bottom: 6px;
+                            z-index: 10;
+                            border-right: 1px solid #0684baee;
+                            border-bottom: 1px solid #0684baee;
+                            background-color: #0684ba88;
+                            border-top-left-radius: 0px;
+                            border-top-right-radius: 70px;
+                            border-bottom-left-radius: 5px;
+                        }
+                    }
+                }                     
+                    
+                
+            }
         }
 
         /* Sendbox*/
@@ -211,4 +274,3 @@ body {
 
     }
 }
-
