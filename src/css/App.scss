@@ -10,7 +10,7 @@ body {
 }
 
 .green-belt {
-    background: #009788;
+    background: #0684ba;
     height: 15vh;
 }
 
@@ -22,7 +22,7 @@ body {
     left:30px;
     border-radius: 3px;
     .inbox{
-        width: 350px;
+        width: 450px;
         border-right: 1px #ddd solid;
         /*Userbox | head*/
         .userbox{
@@ -127,7 +127,7 @@ body {
 
                 }
                 .badge {
-                    background: #2fc32f;
+                    background: #0684ba;
                     padding: 0px 3px;
                     max-width: 32px;
                     text-align: center;
@@ -142,6 +142,73 @@ body {
     }
     .chatbox{
         flex: 1;
+        /*Chathead*/
+        .chathead{
+            background: #f3f3f3;
+            border-radius: 3px 0px 0px 0px;
+            .you {
+                flex: 1;
+                padding-left: 12px;
+                .user {
+                    width:40px;
+                    height:40px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+                .meta {
+                    margin-left: 10px;
+                }
+            }
+            .actions {
+                flex: 1;
+                justify-content: flex-end;
+                padding-right: 5px;
+                button {
+                    width: 50px;
+                    height: 50px;
+                    border: 0px;
+                    background: #cccccc00;
+                    margin-left: 1px;
+                    color: #888;
+                }
+            }
+        }
+        background-color: #34495e99;
+        /* Chat */
+        .chat {
+            border-top: 1px #ddd solid;
+            border-bottom: 1px #ddd solid;
+            flex: 1;
+            background-color: #e4dbd4;
+            background-image: url(https://media.istockphoto.com/id/1216688115/vector/seamless-pattern-with-social-media-elements.jpg?s=612x612&w=0&k=20&c=5c_iSGEPfiNFNKsR2cZaix1plXGuTip3gYF9RYSsCIo=);
+            opacity: 0.05;
+        }
+
+        /* Sendbox*/
+        .sendbox {
+            background: #f3f3f3;
+            padding: 10px;
+            button {
+                width: 40px;
+                height: 40px;
+                border: 0px;
+                background: #00000000;
+                color: #888;
+            }
+            .new-message {
+                flex: 1;
+                border: 0px;
+                margin: 0px 10px;
+                border-radius: 5px;
+                padding: 10px;
+                height: 40px;
+                resize: none;
+            }
+        }
+
     }
 }
 
