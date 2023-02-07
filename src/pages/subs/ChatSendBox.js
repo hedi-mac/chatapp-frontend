@@ -8,7 +8,9 @@ function ChatSendBox(props) {
 
     return (
         <div>
-            { openEmojiBox && <div className={`picker`}><Picker/></div> }
+            { openEmojiBox && <div className={`picker`}>
+                    <Picker onEmojiClick={(emojiObject, event) => {setMessage(message+emojiObject.emoji)}}/>
+                </div> }
             <div className={`sendbox flex aic`}>
                 <button 
                     onClick={() => { setOpenEmojiBox(!openEmojiBox) }}
