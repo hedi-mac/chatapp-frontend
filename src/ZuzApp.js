@@ -16,9 +16,9 @@ function ZuzApp(props) {
         }, 2500)
     }, [])
     return (
-        <BrowserRouter>
-            {loaded ? <Messenger/> : <Splash/>}
-        </BrowserRouter>
+
+            loaded ? <Messenger/> : <Splash/>
+
     );
 }
 
