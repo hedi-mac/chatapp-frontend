@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from '../media/logo25.png'
+import logo from '../media/logo50.png'
 
 function Splash(props) {
     return (
         <div className={`splash abs abc`}>
-            <h2 className={`s30 abs abc`}>WhatsApp</h2>
-            <img src={logo} className={`abs abc`}/>
+            <div class="loader">
+                <img src={logo} className={`logo`}/>
+            </div>
+            
+            {/*<h2 className={`s30 abs abc`}>HRmessApp</h2>*/}
         </div>
     );
 }

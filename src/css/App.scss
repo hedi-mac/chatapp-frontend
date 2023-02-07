@@ -5,8 +5,19 @@ body {
 }
 
 .splash {
-    width: 400px;
-    height: 400px;
+    .loader {
+        top:50%;
+        left:50%;
+        right:50%;
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #0684ba55;
+        border-radius: 50%;
+        padding: 1%;
+        animation: spinloader 2s linear infinite;
+        img {
+            //animation: spinlogo 2s linear infinite;
+        }
+    }
 }
 
 .green-belt {
@@ -283,6 +294,7 @@ body {
             
         }
         
+        /* Picker */
         .picker {
             position: absolute !important;
             bottom: 80px;
@@ -293,4 +305,78 @@ body {
     }
 }
 
+.authcont {
+    .auth {
+        border: 2.5px solid #0684ba25;
+        top: 50px;
+        left:29%;
+        right:29%;
+        background: #fff;
+        width: 40%;
+        padding: 4% 1%;
+        text-align: center;
+        .logo {
+            height: 85px;
+            margin: 0 auto;
+            margin-bottom: 10%;
+        }
+        .title {
+            margin: 0 auto;
+        }
+        .slogan {
+            margin: 2% 0%;
+        }
+        .loginbtn {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 200px;
+            justify-content: center;
+            border: none;
+            outline: none;
+            background-color: #0684ba;
+            color: #fff;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 800;
+            &:hover {
+                background-color: #064f6eee;
+              }
+              
+            i {
+                width: 20px;
+                margin-right: 10px;
+                
+              }
+              .btncont {
+                height: 30px;
+                padding-left: 8%;
+                padding-top: 12px;
+                border-left: 2.5px solid #fff5;
+              }
+          }
 
+    }
+}
+
+@media (max-width: 400px) {
+    .authcont {
+        .auth {
+            top:5%;
+            left:5%;
+            right:5%;
+            width: 90%;
+            padding: 5% 1%;
+            .logo {
+                height: 60px;
+                margin: 0 auto;
+                margin-bottom: 6%;
+            }
+            .title {
+                margin: 0 auto;
+            }
+        }
+    }
+}

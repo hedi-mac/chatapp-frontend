@@ -1,30 +1,42 @@
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./css/App.scss";
 
 //Pages
 import Splash from "./pages/Splash";
 import Messenger from "./pages/Messenger";
+import Signin from "./pages/Signin";
 
 function ZuzApp(props) {
-
-    const { loaded, setState } = props;
+    const time = 1000;
+    const { loaded, session, setState } = props;
     useEffect(()=>{
         setTimeout(()=>{
             setState(true)
-        }, 2500)
+        }, time)
     }, [])
     return (
+            
+        // {  loaded ? <Messenger/> : <Splash/>}  
+        <Router>               
+            <Fragment>
+            { 
+                loaded ? session ? <Routes>
+                    <Route path="/" element={<Messenger/>}/> : 
+                </Routes>: <Signin/> : <Splash/> 
+            }
+            </Fragment>
+        </Router>
 
-            loaded ? <Messenger/> : <Splash/>
 
     );
 }
 
 const mapStateToProps = state => {
     return {
-        loaded: state.App.loaded
+        //loaded: state.App.loaded
+        ...state.App
     }
 }
 

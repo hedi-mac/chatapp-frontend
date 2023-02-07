@@ -1,6 +1,7 @@
 const initialState = {
     debug: true,
-    loaded: true
+    loaded: false,
+    session: false
 }
 
 export default function(state = initialState, action) {
